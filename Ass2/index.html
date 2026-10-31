@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="number" name="num1" id="num1" placeholder="Enter first number">
+        <input type="number" name="num2" id="num2" placeholder="Enter second number">
+        <button id="btn" type="submit">Add</button>
+    </form>
+    <script>
+        let btn = document.querySelector("#btn"); 
+        
+        function Add(event){
+            event.preventDefault(); 
+           
+            let num1Element = document.querySelector("#num1");
+            let num2Element = document.querySelector("#num2");
+
+            
+            let val1 = Number(num1Element.value);
+            let val2 = Number(num2Element.value);
+
+            console.log(val1);
+            console.log(val2);
+            console.log(val1 + val2); 
+        }
+        
+        btn.addEventListener("click", Add);
+    </script>
+</body>
+
+</html>
